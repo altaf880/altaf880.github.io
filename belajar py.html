@@ -1,0 +1,164 @@
+  <!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasar-Dasar Python</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+    .box {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-left: 5px solid #2563eb;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    code {
+      background: #e2e8f0;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: block;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dasar-Dasar Python</h1>
+    <p>Pelajari elemen dasar Python beserta contoh penggunaannya</p>
+  </header>
+  <section data-aos="fade-up">
+    <div class="box">
+      <h2>1. Variabel</h2>
+      <p>Digunakan untuk menyimpan data.</p>
+      <code>x = 5
+y = "Halo"
+print(x, y)</code>
+    </div><div class="box" data-aos="fade-up">
+  <h2>2. Tipe Data</h2>
+  <p>Contoh tipe data: Integer, String, Float, Boolean.</p>
+  <code>umur = 15
+
+nama = "Altag" tinggi = 1.60 aktif = True</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>3. Percabangan (If)</h2>
+  <p>Menjalankan kode berdasarkan kondisi tertentu.</p>
+  <code>nilai = 80
+
+if nilai > 75: print("Lulus") else: print("Tidak Lulus")</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>4. Perulangan (For dan While)</h2>
+  <p>Melakukan perulangan beberapa kali.</p>
+  <code>for i in range(3):
+print("Halo")
+
+n = 0 while n < 3: print("Hi") n += 1</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>5. Fungsi</h2>
+  <p>Blok kode yang dapat dipanggil berulang.</p>
+  <code>def sapa(nama):
+print("Halo,", nama)
+
+sapa("altap")</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>6. List (Array)</h2>
+  <p>Struktur data untuk menyimpan banyak nilai.</p>
+  <code>buah = ["apel", "pisang", "jeruk"]
+
+print(buah[0])</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>7. Dictionary</h2>
+  <p>Penyimpanan data dengan pasangan key-value.</p>
+  <code>mahasiswa = {"nama": "altap", "umur": 15}
+
+print(mahasiswa["nama"])</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>8. Tuple</h2>
+  <p>Mirip list, tapi tidak dapat diubah (immutable).</p>
+  <code>warna = ("merah", "hijau", "biru")
+
+print(warna[1])</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>9. Set</h2>
+  <p>Kumpulan item unik, tidak memiliki indeks.</p>
+  <code>angka = {1, 2, 3, 3, 2}
+
+print(angka)</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>10. Class dan Object</h2>
+  <p>Membuat objek dengan atribut dan metode.</p>
+  <code>class Orang:
+def __init__(self, nama):
+    self.nama = nama
+
+def sapa(self):
+    print("Halo, saya", self.nama)
+
+siswa = Orang("altap) siswa.sapa()</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>11. Try-Except</h2>
+  <p>Menangani error agar program tidak berhenti tiba-tiba.</p>
+  <code>try:
+hasil = 10 / 0
+
+except ZeroDivisionError: print("Tidak bisa dibagi dengan nol")</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>12. Import Modul</h2>
+  <p>Memasukkan fungsi dari modul lain.</p>
+  <code>import math
+
+print(math.sqrt(16))</code> </div>
+
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+</html>
