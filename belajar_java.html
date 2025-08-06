@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dasar-Dasar Java</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: #f3f4f6;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .box {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-left: 5px solid #3b82f6;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+    }
+    code {
+      background: #e5e7eb;
+      display: block;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+    }
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dasar-Dasar Java</h1>
+    <p>15 Elemen dan Fungsi Dasar Bahasa Pemrograman Java</p>
+  </header>  <section>
+    <div class="box" data-aos="fade-up">
+      <h2>1. Hello World</h2>
+      <p>Program pertama untuk mencetak teks ke layar.</p>
+      <code>public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, altap");
+  }
+}</code>
+    </div><div class="box" data-aos="fade-up">
+  <h2>2. Variabel</h2>
+  <p>Digunakan untuk menyimpan data.</p>
+  <code>int umur = 15;
+
+String nama = "Andi";</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>3. Tipe Data</h2>
+  <p>Beberapa tipe data utama dalam Java.</p>
+  <code>int angka = 10;
+
+float nilai = 7.5f; boolean aktif = true; char huruf = 'A';</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>4. Percabangan</h2>
+  <p>Pengambilan keputusan menggunakan if-else.</p>
+  <code>if (umur >= 18) {
+
+System.out.println("Dewasa"); } else { System.out.println("Anak-anak"); }</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>5. Switch</h2>
+  <p>Mengganti if-else bertingkat.</p>
+  <code>int hari = 3;
+
+switch (hari) { case 1: System.out.println("Senin"); break; case 2: System.out.println("Selasa"); break; default: System.out.println("Hari lainnya"); }</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>6. Perulangan For</h2>
+  <p>Digunakan untuk mengulang kode dalam jumlah tertentu.</p>
+  <code>for (int i = 0; i < 5; i++) {
+
+System.out.println("Perulangan ke-" + i); }</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>7. While Loop</h2>
+  <p>Perulangan selama kondisi terpenuhi.</p>
+  <code>int i = 0;
+
+while (i < 5) { System.out.println(i); i++; }</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>8. Do-While Loop</h2>
+  <p>Minimal dieksekusi sekali, lalu cek kondisi.</p>
+  <code>int i = 0;
+
+do { System.out.println(i); i++; } while (i < 5);</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>9. Array</h2>
+  <p>Struktur data untuk menyimpan banyak nilai.</p>
+  <code>String[] buah = {"apel", "jeruk", "mangga"};
+
+System.out.println(buah[1]);</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>10. Method</h2>
+  <p>Blok kode yang bisa dipanggil berkali-kali.</p>
+  <code>public static void sapa(String nama) {
+
+System.out.println("Halo, " + nama); }
+
+sapa("Rani");</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>11. Class dan Object</h2>
+  <p>Dasar dari OOP (Pemrograman Berorientasi Objek).</p>
+  <code>class Siswa {
+
+String nama = "Budi"; }
+
+Siswa s = new Siswa(); System.out.println(s.nama);</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>12. Konstruktor</h2>
+  <p>Fungsi khusus saat objek dibuat.</p>
+  <code>class Mobil {
+
+Mobil() { System.out.println("Mobil dibuat!"); } } Mobil m = new Mobil();</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>13. Inheritance</h2>
+  <p>Konsep pewarisan sifat dari class.</p>
+  <code>class Hewan {
+
+void suara() { System.out.println("Suara hewan"); } } class Kucing extends Hewan {} Kucing k = new Kucing(); k.suara();</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>14. Interface</h2>
+  <p>Template kontrak class-class lain.</p>
+  <code>interface Hewan {
+
+void suara(); } class Anjing implements Hewan { public void suara() { System.out.println("Guk Guk"); } }</code> </div>
+
+<div class="box" data-aos="fade-up">
+  <h2>15. Try-Catch</h2>
+  <p>Menangani error atau exception.</p>
+  <code>try {
+
+int hasil = 10 / 0; } catch (Exception e) { System.out.println("Terjadi kesalahan: " + e); }</code> </div>
+
+  </section>  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script></body>
+</html>
