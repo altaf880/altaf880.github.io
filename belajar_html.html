@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jenis-Jenis Elemen HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #1f1f2e, #2e2e3e);
+      color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #00d9ff;
+      border-bottom: 2px solid #00d9ff;
+      padding-bottom: 5px;
+    }
+
+    section {
+      background: #2b2b3a;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    code {
+      background: #444;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 90%;
+    }
+
+    input, select, textarea, button {
+      padding: 8px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #555;
+      padding: 8px;
+      text-align: left;
+    }
+
+    video, img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Jenis-Jenis Elemen HTML & Fungsinya</h1>
+
+  <section>
+    <h2>1. Heading</h2>
+    <p>Digunakan untuk membuat judul atau subjudul.</p>
+    <code>&lt;h1&gt; sampai &lt;h6&gt;</code>
+    <h3>Contoh: Ini H3</h3>
+  </section>
+
+  <section>
+    <h2>2. Paragraf & Garis</h2>
+    <p>Digunakan untuk menulis teks biasa.</p>
+    <code>&lt;p&gt;</code>
+    <hr />
+  </section>
+
+  <section>
+    <h2>3. Gambar</h2>
+    <p>Menampilkan gambar dari file atau URL.</p>
+    <code>&lt;img src="..."&gt;</code><br>
+    <img src="file_00000000059461f7bde28443ad9b317d.png " alt="Contoh Gambar">
+  </section>
+
+  <section>
+    <h2>4. Tautan (Link)</h2>
+    <p>Mengarahkan ke halaman lain.</p>
+    <code>&lt;a href="..."&gt;</code><br>
+    <a href="https://www.google.com" target="_blank">Kunjungi Google</a>
+  </section>
+
+  <section>
+    <h2>5. Daftar</h2>
+    <p>Daftar berurutan dan tidak berurutan.</p>
+    <code>&lt;ul&gt; &lt;ol&gt; &lt;li&gt;</code>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <ol>
+      <li>Satu</li>
+      <li>Dua</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>6. Formulir</h2>
+    <p>Input dari pengguna.</p>
+    <code>&lt;form&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;</code><br>
+    <form>
+      Nama: <input type="text" placeholder="Masukkan nama"><br>
+      Komentar: <textarea placeholder="Tulis komentar..."></textarea><br>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>7. Tabel</h2>
+    <p>Menampilkan data dalam bentuk kolom dan baris.</p>
+    <code>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;</code>
+    <table>
+      <tr><th>Nama</th><th>Usia</th></tr>
+      <tr><td>Ali</td><td>25</td></tr>
+      <tr><td>Budi</td><td>30</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>8. Video & Audio</h2>
+    <p>Media yang bisa diputar di browser.</p>
+    <code>&lt;video&gt; &lt;audio&gt;</code><br>
+    <video controls src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
+  </section>
+
+  <section>
+    <h2>9. Button (Tombol)</h2>
+    <p>Digunakan untuk aksi seperti klik.</p>
+    <code>&lt;button&gt;</code><br>
+    <button onclick="alert('Halo!')">Klik Saya</button>
+  </section>
+
+  <section>
+    <h2>10. Div & Span</h2>
+    <p>Elemen pembungkus untuk tata letak dan gaya.</p>
+    <code>&lt;div&gt;, &lt;span&gt;</code>
+    <div style="background:#444; padding:10px; border-radius:6px;">Ini div</div>
+    <p>Teks <span style="color:#0ff;">berwarna</span> dalam span</p>
+  </section>
+
+</body>
+</html>
