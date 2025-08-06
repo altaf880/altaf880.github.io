@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perkenalan Altaf</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      position: relative;
+      background: #0f2027;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      top: 0;
+      left: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 25px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+      backdrop-filter: blur(12px);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1, p {
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 12px 0;
+      font-weight: 400;
+    }
+
+    .quote {
+      margin-top: 30px;
+      font-style: italic;
+      color: #e0e0e0;
+      font-weight: 500;
+      font-size: 1.1em;
+    }
+
+    .animate-scale {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Partikel -->
+  <div id="particles-js"></div>
+
+  <div class="container">
+    <h1 onclick="animate(this)">kenalkan nama Saya Altaf</h1>
+    <p onclick="animate(this)"><strong>Umur :</strong> 15 tahun</p>
+    <p onclick="animate(this)"><strong>Status :</strong> Pelajar SMK Muhammadiyah</p>
+    <p onclick="animate(this)"><strong>Jurusan :</strong> Rekayasa Perangkat Lunak (RPL)</p>
+    <p class="quote" onclick="animate(this)">"Saran saya : kalau belajar yang paling utama adalah <strong>niat</strong> dan <strong>tujuan</strong>."</p>
+  </div>
+
+  <!-- Animasi klik -->
+  <script>
+    function animate(element) {
+      element.classList.add('animate-scale');
+      setTimeout(() => {
+        element.classList.remove('animate-scale');
+      }, 300);
+    }
+  </script>
+
+  <!-- Library Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 50,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": { "value": "#ffffff" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" }
+        },
+        "opacity": {
+          "value": 0.3,
+          "random": true
+        },
+        "size": {
+          "value": 3,
+          "random": true
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "out_mode": "out"
+        }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        },
+        "modes": {
+          "repulse": {
+            "distance": 100,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
