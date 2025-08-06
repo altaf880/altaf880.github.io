@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="id">  <head>      <meta charset="UTF-8">      <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>Dasar-Dasar PHP</title>    
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">    
+  <style>    
+    * {    
+      margin: 0;    
+      padding: 0;    
+      box-sizing: border-box;    
+      scroll-behavior: smooth;    
+      font-family: 'Poppins', sans-serif;    
+    }    
+    body {    
+      background: #f0f4f8;    
+      color: #333;    
+      line-height: 1.6;    
+    }    
+    header {    
+      background: #0f172a;    
+      color: #fff;    
+      padding: 20px 0;    
+      text-align: center;    
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);    
+    }    
+    section {    
+      padding: 60px 20px;    
+      max-width: 1000px;    
+      margin: auto;    
+    }    
+    h1, h2 {    
+      margin-bottom: 20px;    
+    }    
+    .box {    
+      background: #fff;    
+      padding: 20px;    
+      margin-bottom: 30px;    
+      border-left: 5px solid #0ea5e9;    
+      border-radius: 10px;    
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);    
+      transition: transform 0.3s ease;    
+    }    
+    .box:hover {    
+      transform: translateY(-5px);    
+    }    
+    code {    
+      background: #e2e8f0;    
+      padding: 10px;    
+      display: block;    
+      border-radius: 5px;    
+      white-space: pre-wrap;    
+    }    
+  </style>    
+</head>    
+<body>    
+  <header>    
+    <h1>Dasar-Dasar PHP</h1>    
+    <p>Pelajari elemen penting dalam pemrograman PHP</p>    
+  </header>  <section>    
+    <div class="box" data-aos="fade-up">    
+      <h2>1. Tag Dasar PHP</h2>    
+      <p>Tag pembuka dan penutup PHP digunakan untuk menulis kode PHP di dalam file HTML.</p>    
+      <code>&lt;?php
+echo "Halo Dunia!";
+?&gt;</code>    
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>2. Variabel</h2>
+      <p>Digunakan untuk menyimpan nilai.</p>
+      <code>&lt;?php
+$nama = "altap";
+$umur = 15;
+echo $nama;
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>3. Tipe Data</h2>
+      <p>PHP memiliki tipe data seperti string, integer, float, boolean, array, dan object.</p>
+      <code>&lt;?php
+$teks = "Hello";
+$angka = 10;
+$desimal = 3.14;
+$benar = true;
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>4. Percabangan (if/else)</h2>
+      <p>Digunakan untuk pengambilan keputusan.</p>
+      <code>&lt;?php
+$nilai = 75;
+if ($nilai >= 70) {
+  echo "Lulus";
+} else {
+  echo "Tidak Lulus";
+}
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>5. Perulangan</h2>
+      <p>Untuk mengulang eksekusi kode.</p>
+      <code>&lt;?php
+for ($i = 0; $i < 5; $i++) {
+  echo "Angka $i <br>";
+}
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>6. Array</h2>
+      <p>Menyimpan banyak nilai dalam satu variabel.</p>
+      <code>&lt;?php
+$buah = array("apel", "jeruk", "mangga");
+echo $buah[1];
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>7. Function</h2>
+      <p>Membuat blok kode yang bisa dipanggil berulang.</p>
+      <code>&lt;?php
+function sapa($nama) {
+  echo "Halo, $nama";
+}
+sapa("altap");
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>8. Superglobal ($_GET, $_POST)</h2>
+      <p>Digunakan untuk mengambil data dari form atau URL.</p>
+      <code>&lt;form method="post">
+  Nama: <input type="text" name="nama">
+  <input type="submit">
+</form>
+&lt;?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $nama = $_POST["nama"];
+  echo "Halo, $nama";
+}
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>9. Include dan Require</h2>
+      <p>Menyisipkan file PHP lain ke dalam file utama.</p>
+      <code>&lt;?php
+include 'header.php';
+require 'config.php';
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>10. Class dan Object</h2>
+      <p>Untuk menerapkan konsep OOP.</p>
+      <code>&lt;?php
+class Mobil {
+  public $warna;
+  function set_warna($warna) {
+    $this->warna = $warna;
+  }
+}
+$avanza = new Mobil();
+$avanza->set_warna("Merah");
+echo $avanza->warna;
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>11. Try-Catch</h2>
+      <p>Menangani error dengan pengecualian.</p>
+      <code>&lt;?php
+try {
+  throw new Exception("Terjadi kesalahan!");
+} catch (Exception $e) {
+  echo $e->getMessage();
+}
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>12. Koneksi ke Database</h2>
+      <p>Menghubungkan PHP ke MySQL.</p>
+      <code>&lt;?php
+$conn = mysqli_connect("localhost", "root", "", "dbku");
+if (!$conn) {
+  die("Koneksi gagal: " . mysqli_connect_error());
+}
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>13. CRUD - Create</h2>
+      <p>Menyimpan data ke database.</p>
+      <code>&lt;?php
+$sql = "INSERT INTO siswa (nama, umur) VALUES ('altap', 15)";
+mysqli_query($conn, $sql);
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>14. CRUD - Read</h2>
+      <p>Menampilkan data dari database.</p>
+      <code>&lt;?php
+$result = mysqli_query($conn, "SELECT * FROM siswa");
+while($row = mysqli_fetch_assoc($result)) {
+  echo $row['nama'] . "<br>";
+}
+?></code>
+    </div>
+    <div class="box" data-aos="fade-up">
+      <h2>15. CRUD - Update & Delete</h2>
+      <p>Update dan hapus data dari database.</p>
+      <code>&lt;?php
+mysqli_query($conn, "UPDATE siswa SET umur=19 WHERE nama='Budi'");
+mysqli_query($conn, "DELETE FROM siswa WHERE nama='altap'");
+?></code>
+    </div>
+  </section>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>  
+  <script>    
+    AOS.init({    
+      duration: 1000,    
+      easing: 'ease-in-out',    
+      once: true    
+    });
+  </script>
+</body>
+</html>
