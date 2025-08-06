@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Warna-Warna CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #fff;
+      background: linear-gradient(270deg, #1e3c72, #2a5298, #1e3c72);
+      background-size: 600% 600%;
+      animation: gradientMove 20s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .color-box {
+      padding: 20px;
+      color: #fff;
+      border-radius: 8px;
+      text-shadow: 1px 1px 2px #000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .color-box:hover {
+      transform: scale(1.07);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    .color-name {
+      font-weight: bold;
+    }
+
+    .color-code {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Warna-Warna CSS</h1>
+  <div class="color-grid" id="colorGrid"></div>
+
+  <script>
+    const colors = [
+      "Red", "Green", "Blue", "Yellow", "Orange", "Purple", "Pink",
+      "Brown", "Gray", "Black", "White", "Cyan", "Magenta",
+      "Lime", "Maroon", "Navy", "Olive", "Teal", "Silver", "Gold"
+    ];
+
+    const colorGrid = document.getElementById("colorGrid");
+
+    colors.forEach(color => {
+      const div = document.createElement("div");
+      div.className = "color-box";
+      div.style.backgroundColor = color;
+
+      // Temp div untuk ambil warna RGB/HEX
+      const temp = document.createElement("div");
+      temp.style.backgroundColor = color;
+      document.body.appendChild(temp);
+      const computedColor = window.getComputedStyle(temp).backgroundColor;
+      document.body.removeChild(temp);
+
+      div.innerHTML = `
+        <div class="color-name">${color}</div>
+        <div class="color-code">${computedColor}</div>
+      `;
+
+      div.addEventListener("click", () => {
+        alert(`Kode warna untuk ${color}: ${computedColor}`);
+      });
+
+      colorGrid.appendChild(div);
+    });
+  </script>
+</body>
+</html>
