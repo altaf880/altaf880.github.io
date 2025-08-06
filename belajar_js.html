@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panduan JavaScript Modern</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      color: #fff;
+      padding: 40px 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #1d2671, #c33764, #43cea2, #00c9ff);
+      background-size: 600% 600%;
+      animation: gradientBG 20s ease infinite;
+      z-index: -1;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p.intro {
+      text-align: center;
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      width: 300px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .card code {
+      display: block;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 10px;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 0.95em;
+      white-space: pre-wrap;
+    }
+
+    .output {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.2em;
+      color: #00ffc8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Panduan Dasar JavaScript</h1>
+  <p class="intro">Berikut adalah elemen-elemen dasar JavaScript dan fungsinya, lengkap dengan contoh penggunaannya:</p>
+  
+  <div class="container">
+    <div class="card">
+      <h2>let / const / var</h2>
+      <p>Digunakan untuk mendeklarasikan variabel.</p>
+      <code>
+let nama = "Altaf";
+const umur = 20;
+var kota = "Jakarta";
+      </code>
+    </div>
+    <div class="card">
+      <h2>function</h2>
+      <p>Fungsi adalah blok kode yang bisa digunakan ulang.</p>
+      <code>
+function sapa(nama) {
+  console.log("Halo, " + nama);
+}
+sapa("Altaf");
+      </code>
+    </div>
+    <div class="card">
+      <h2>if / else</h2>
+      <p>Untuk membuat logika percabangan.</p>
+      <code>
+if (umur > 18) {
+  console.log("Dewasa");
+} else {
+  console.log("Remaja");
+}
+      </code>
+    </div>
+    <div class="card">
+      <h2>for / while</h2>
+      <p>Melakukan perulangan kode.</p>
+      <code>
+for (let i = 0; i < 3; i++) {
+  console.log("Ulang ke-" + i);
+}
+      </code>
+    </div>
+    <div class="card">
+      <h2>document.getElementById()</h2>
+      <p>Memilih elemen berdasarkan ID.</p>
+      <code>
+let judul = document.getElementById("judul");
+judul.textContent = "Judul Baru";
+      </code>
+    </div>
+    <div class="card">
+      <h2>addEventListener</h2>
+      <p>Menangani event pengguna seperti klik.</p>
+      <code>
+dokumen.getElementById("tombol")
+  .addEventListener("click", function() {
+    alert("Tombol diklik!");
+  });
+      </code>
+    </div>
+    <div class="card">
+      <h2>console.log()</h2>
+      <p>Menampilkan output ke console (debugging).</p>
+      <code>
+console.log("Ini debug");
+      </code>
+    </div>
+    <div class="card">
+      <h2>Array & Object</h2>
+      <p>Struktur data penting dalam JavaScript.</p>
+      <code>
+let buah = ["apel", "jeruk"];
+let orang = { nama: "Altaf", umur: 20 };
+      </code>
+    </div>
+    <div class="card">
+      <h2>setTimeout / setInterval</h2>
+      <p>Menunda atau mengulang fungsi dalam waktu tertentu.</p>
+      <code>
+setTimeout(() => console.log("Tunggu 2 detik"), 2000);
+setInterval(() => console.log("Setiap 1 detik"), 1000);
+      </code>
+    </div>
+    <div class="card">
+      <h2>fetch()</h2>
+      <p>Mengambil data dari server (API).</p>
+      <code>
+fetch("https://api.example.com/data")
+  .then(res => res.json())
+  .then(data => console.log(data));
+      </code>
+    </div>
+  </div>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    // Contoh interaktif animasi teks dengan JavaScript
+    const teks = "Halo, ini contoh JavaScript interaktif!";
+    let i = 0;
+    const output = document.getElementById("output");
+
+    function ketikSatuPerSatu() {
+      if (i < teks.length) {
+        output.textContent += teks.charAt(i);
+        i++;
+        setTimeout(ketikSatuPerSatu, 100);
+      }
+    }
+
+    window.onload = ketikSatuPerSatu;
+  </script>
+</body>
+</html>
