@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALTAP GANTENG BANGETTT</title>
+  <meta name="description" content="Website Resmi SMK Muhammadiyah Majenang Cilacap Jawa Tengah"/>
+  <meta name="keywords" content="smk muhammadiyah majenang, web sekolah resmi smk muh majenang, website sekolah smk muhammadiyah majenang, smk di majenang, smk di cilacap"/>
+  <meta name="theme-color" content="#111827">
+  <meta name="msapplication-navbutton-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="shortcut icon" href="https://www.smkmuhmajenang.sch.id/schtpl/images/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827;
+      color: #f9fafb;
+    }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .metro-tile {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      aspect-ratio: 1 / 1;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    .metro-tile:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    .metro-tile .icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      transition: transform 0.3s ease;
+    }
+    @media (min-width: 640px) {
+      .metro-tile .icon {
+        font-size: 3rem;
+      }
+      .metro-tile p {
+        font-size: 1rem;
+      }
+    }
+    .metro-tile:hover .icon {
+      transform: scale(1.1);
+    }
+    .metro-tile p {
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 1.25;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .bg-tile-1 { background: linear-gradient(to right, gray, black); border-radius: 100%; }
+    .bg-tile-2 { background: linear-gradient(to right, red, yellow, green, blue); border-radius: 100%; }
+    .bg-tile-3 { background-color: gray; border-radius: 100%; }
+    .bg-tile-4 { background-color: red; border-radius: 100%; }
+    .bg-tile-5 { background-color: blue; border-radius: 100%; }
+    .bg-tile-6 { background-color: #daa520; border-radius: 100%; }
+    .bg-tile-7 { background: linear-gradient(to right, yellow, sandybrown); border-radius: 200%; }
+    .bg-tile-8 { background: linear-gradient(to right, white, blue); border-radius: 200%; }
+    .bg-tile-9 { background: linear-gradient(to right, #daa520, sandybrown); border-radius: 100%; }
+    .apk { color: silver; }
+    img { border-radius: 200%; }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container mx-auto px-4 py-8 relative z-10">
+    <header class="flex flex-col md:flex-row items-center justify-between mb-12">
+      <div class="flex flex-col md:flex-row items-center text-center md:text-left">
+        <i class="fa-solid fa-user" style="font-size: 70px; color:gray"></i>
+        <div class="mt-4 md:mt-0 md:ml-6">
+          <h1 class="text-2xl md:text-3xl font-bold text-gray-400">ALTAP GANTENG</h1>
+          <p class="text-gray-300 text-sm">WhatsApp: 0882-0081-86170</p>
+          <p class="text-gray-400 mt-1 text-sm md:text-base">Status: pelajar SMK MUHAMMADIYAH</p>
+          <marquee><p class="text-gray-400 text-sm md:text-base">selamat datang di website saya</p></marquee>
+        </div>
+      </div>
+      <div><em class="apk"> pilih aplikasi yang anda inginkan </em></div>
+    </header>
+    <div class="mb-8 relative">
+      <input type="text" id="searchInput" placeholder="Cari aplikasi..." class="w-full bg-gray-800 border-2 border-gray-600 text-white placeholder-gray-400 rounded-full py-3 pl-6 pr-12 focus:outline-none focus:border-yellow-500 transition-colors duration-300">
+      <i class="fas fa-search absolute right-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+    </div>
+    <main>
+      <div id="metro-grid" class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-8 lg:grid-cols-5 xl:grid-cols-6 gap-2 md:gap-6"></div>
+    </main>
+    <footer class="text-center text-gray-400 mt-12 border-t border-gray-700 pt-6">
+      <p>&copy; 2025 SMK Muhammadiyah Majenang</p>
+      <p class="text-sm mt-1">Jl. Raya Padangjaya No. 261 Kel. Padangjaya Kec. Majenang 53257 Cilacap Prov. Jawa Tengah</p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tiles = [
+        { href: 'https://altaf880.github.io/sistem.html', icon: 'fa-cog', text: 'sistem hp anda' },
+        { href: 'https://altaf880.github.io/warna_css.html', icon: 'fa-palette', text: 'Warna CSS' },
+        { href: 'https://altaf880.github.io/perkenalan.html', icon: 'fa-user', text: 'Tentang Saya' },
+        { href: 'https://altaf880.github.io/belajar_html.html', icon: 'fab fa-html5', text: 'Contoh Code HTML' },
+        { href: 'https://altaf880.github.io/belajar_css.html', icon: 'fab fa-css3', text: 'Contoh Code CSS' },
+        { href: 'https://altaf880.github.io/belajar_js.html', icon: 'fab fa-js', text: 'Contoh Code JS' },
+        { href: 'https://altaf880.github.io/belajar_py.html', icon: 'fab fa-python', text: 'Contoh Code PY' },
+        { href: 'https://altaf880.github.io/belajar_php.html', icon: 'fab fa-php', text: 'Contoh Code PHP' },
+        { href: 'https://altaf880.github.io/belajar_java.html', icon: 'fab fa-java', text: 'Contoh Code Java' },
+      ];const grid = document.getElementById('metro-grid');
+  const colorClasses = ['bg-tile-1', 'bg-tile-2', 'bg-tile-3', 'bg-tile-4', 'bg-tile-5', 'bg-tile-6', 'bg-tile-7', 'bg-tile-8', 'bg-tile-9'];
+
+  tiles.forEach((tile, index) => {
+    const tileElement = document.createElement('a');
+    tileElement.href = tile.href;
+    tileElement.target = '_blank';
+    const colorClass = colorClasses[index % colorClasses.length];
+    tileElement.className = `metro-tile text-gray ${colorClass}`;
+    tileElement.innerHTML = `<i class="icon fas ${tile.icon}"></i><p>${tile.text}</p>`;
+    grid.appendChild(tileElement);
+  });
+
+  const searchInput = document.getElementById('searchInput');
+  const allTiles = grid.getElementsByTagName('a');
+  searchInput.addEventListener('input', function () {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    for (let tile of allTiles) {
+      const tileText = tile.querySelector('p').textContent.toLowerCase();
+      tile.style.display = tileText.includes(searchTerm) ? 'flex' : 'none';
+    }
+  });
+
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 80, density: { enable: true, value_area: 800 } },
+      color: { value: '#ffffff' },
+      shape: { type: 'circle' },
+      opacity: { value: 0.5, random: false },
+      size: { value: 3, random: true },
+      line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+      move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false }
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: { enable: true, mode: 'repulse' },
+        onclick: { enable: true, mode: 'push' },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 100, duration: 0.4 },
+        push: { particles_nb: 4 }
+      }
+    }
+  });
+});
+
+  </script>
+</body>
+</html>
