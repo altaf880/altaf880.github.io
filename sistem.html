@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deteksi Sistem</title>
+
+  <!-- Tambahkan particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Animasi latar belakang partikel */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+      z-index: -1;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      z-index: 1;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-shadow: 0 0 10px #00bcd4;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      width: 320px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(0, 255, 255, 0.3);
+    }
+
+    .loading {
+      font-style: italic;
+      color: #ccc;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Partikel -->
+  <div id="particles-js"></div>
+
+  <!-- Konten Utama -->
+  <h2>Deteksi Info Sistem</h2>
+  <div class="card" id="jam">Jam: <span class="loading">Mendeteksi...</span></div>
+  <div class="card" id="baterai">Baterai: <span class="loading">Mendeteksi...</span></div>
+  <div class="card" id="ram">RAM: <span class="loading">Mendeteksi...</span></div>
+  <div class="card" id="useragent">User-Agent: <span class="loading">Mendeteksi...</span></div>
+  <div class="card" id="suhu">Suhu Ruang: <span class="loading">Mendeteksi...</span></div>
+
+  <script>
+    // Jam
+    function updateJam() {
+      const jam = new Date().toLocaleTimeString();
+      document.getElementById("jam").innerText = "Jam: " + jam;
+    }
+    setInterval(updateJam, 1000);
+    updateJam();
+
+    // Baterai
+    if (navigator.getBattery) {
+      navigator.getBattery().then(battery => {
+        function updateBattery() {
+          const level = Math.round(battery.level * 100) + "%";
+          const charging = battery.charging ? " (Mengisi)" : " (Tidak mengisi)";
+          document.getElementById("baterai").innerText = `Baterai: ${level} ${charging}`;
+        }
+        battery.addEventListener("levelchange", updateBattery);
+        battery.addEventListener("chargingchange", updateBattery);
+        updateBattery();
+      });
+    } else {
+      document.getElementById("baterai").innerText = "Baterai: Tidak didukung browser ini";
+    }
+
+    // RAM
+    const ram = navigator.deviceMemory || "Tidak diketahui";
+    document.getElementById("ram").innerText = `RAM: ${ram} GB`;
+
+    // User Agent
+    document.getElementById("useragent").innerText = `User-Agent: ${navigator.userAgent}`;
+
+    // Suhu Simulasi
+    function simulasiSuhu() {
+      const suhu = (Math.random() * (34 - 24) + 24).toFixed(1); // antara 24–34 °C
+      document.getElementById("suhu").innerText = `Suhu Ruang: ${suhu} °C (Simulasi)`;
+    }
+    simulasiSuhu();
+    setInterval(simulasiSuhu, 30000);
+
+    // Particles.js Konfigurasi
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.3,
+          random: true
+        },
+        size: {
+          value: 3,
+          random: true
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          out_mode: "out"
+        },
+        line_linked: {
+          enable: true,
+          distance: 100,
+          color: "#ffffff",
+          opacity: 0.2,
+          width: 1
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 80 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
