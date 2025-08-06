@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tutorial Dasar CSS</title>
+  <style>
+    html {
+      scroll-behavior: smooth; /* Scroll halus saat pindah bagian halaman */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(270deg, #c3e0ff, #ffffff, #c3e0ff);
+      background-size: 600% 600%;
+      animation: bgAnim 15s ease infinite; /* Animasi background */
+    }
+
+    @keyframes bgAnim {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #007BFF;
+    }
+
+    .example {
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      text-align: center;
+      border: 1px dashed #aaa;
+    }
+
+    .bg-example { background-color: lightblue; }
+    .color-example { color: red; }
+    .padding-example { padding: 20px; background-color: #eee; }
+    .margin-example { margin: 20px 0; background-color: #eee; }
+    .border-example { border: 2px solid green; }
+    .radius-example { border-radius: 20px; background-color: #eee; }
+    .shadow-example { box-shadow: 2px 2px 10px rgba(0,0,0,0.2); background-color: #fff; }
+    .text-align-example { text-align: right; background-color: #eee; }
+    .font-example { font-family: 'Courier New'; background-color: #eee; }
+    .width-example { width: 100px; background-color: #ddd; }
+    .display-example { display: inline-block; background-color: lightcoral; }
+    .position-example { position: relative; top: 10px; left: 10px; background-color: #eee; }
+    .hover-example:hover { background-color: yellow; cursor: pointer; }
+    .flex-example {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      background-color: #eee;
+    }
+    .flex-item {
+      background: #ccc;
+      padding: 10px;
+      flex: 1;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>15+ Tutorial Dasar CSS</h1>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>1. background-color</h3>
+      <p><b>Fungsi:</b> Memberi warna latar elemen.</p>
+      <p><b>CSS:</b> <code>background-color: lightblue;</code></p>
+      <div class="example bg-example">Warna latar belakang</div>
+    </div>
+
+    <div class="card">
+      <h3>2. color</h3>
+      <p><b>Fungsi:</b> Mengubah warna teks.</p>
+      <p><b>CSS:</b> <code>color: red;</code></p>
+      <div class="example color-example">Teks berwarna merah</div>
+    </div>
+
+    <div class="card">
+      <h3>3. padding</h3>
+      <p><b>Fungsi:</b> Menambah jarak isi ke pinggir elemen.</p>
+      <p><b>CSS:</b> <code>padding: 20px;</code></p>
+      <div class="example padding-example">Dengan padding</div>
+    </div>
+
+    <div class="card">
+      <h3>4. margin</h3>
+      <p><b>Fungsi:</b> Memberi jarak antar elemen.</p>
+      <p><b>CSS:</b> <code>margin: 20px 0;</code></p>
+      <div class="example margin-example">Dengan margin</div>
+    </div>
+
+    <div class="card">
+      <h3>5. border</h3>
+      <p><b>Fungsi:</b> Menambahkan garis tepi.</p>
+      <p><b>CSS:</b> <code>border: 2px solid green;</code></p>
+      <div class="example border-example">Dengan border</div>
+    </div>
+
+    <div class="card">
+      <h3>6. border-radius</h3>
+      <p><b>Fungsi:</b> Membulatkan sudut elemen.</p>
+      <p><b>CSS:</b> <code>border-radius: 20px;</code></p>
+      <div class="example radius-example">Sudut membulat</div>
+    </div>
+
+    <div class="card">
+      <h3>7. box-shadow</h3>
+      <p><b>Fungsi:</b> Memberi bayangan.</p>
+      <p><b>CSS:</b> <code>box-shadow: 2px 2px 10px rgba(0,0,0,0.2);</code></p>
+      <div class="example shadow-example">Dengan bayangan</div>
+    </div>
+
+    <div class="card">
+      <h3>8. text-align</h3>
+      <p><b>Fungsi:</b> Mengatur posisi teks.</p>
+      <p><b>CSS:</b> <code>text-align: right;</code></p>
+      <div class="example text-align-example">Teks kanan</div>
+    </div>
+
+    <div class="card">
+      <h3>9. font-family</h3>
+      <p><b>Fungsi:</b> Mengubah jenis huruf.</p>
+      <p><b>CSS:</b> <code>font-family: 'Courier New';</code></p>
+      <div class="example font-example">Font Courier</div>
+    </div>
+
+    <div class="card">
+      <h3>10. width</h3>
+      <p><b>Fungsi:</b> Mengatur lebar elemen.</p>
+      <p><b>CSS:</b> <code>width: 100px;</code></p>
+      <div class="example width-example">Lebar 100px</div>
+    </div>
+
+    <div class="card">
+      <h3>11. display</h3>
+      <p><b>Fungsi:</b> Tipe tampilan elemen (block, inline, dll).</p>
+      <p><b>CSS:</b> <code>display: inline-block;</code></p>
+      <div class="example display-example">Inline Block</div>
+    </div>
+
+    <div class="card">
+      <h3>12. position</h3>
+      <p><b>Fungsi:</b> Menentukan posisi elemen.</p>
+      <p><b>CSS:</b> <code>position: relative; top: 10px;</code></p>
+      <div class="example position-example">Posisi relatif</div>
+    </div>
+
+    <div class="card">
+      <h3>13. :hover</h3>
+      <p><b>Fungsi:</b> Efek saat kursor diarahkan.</p>
+      <p><b>CSS:</b> <code>:hover { background-color: yellow; }</code></p>
+      <div class="example hover-example">Arahkan mouse ke sini</div>
+    </div>
+
+    <div class="card">
+      <h3>14. flex</h3>
+      <p><b>Fungsi:</b> Mengatur layout fleksibel.</p>
+      <p><b>CSS:</b> <code>display: flex;</code></p>
+      <div class="example flex-example">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>15. box-sizing</h3>
+      <p><b>Fungsi:</b> Menghitung padding dan border dalam width.</p>
+      <p><b>CSS:</b> <code>box-sizing: border-box;</code></p>
+      <div class="example" style="box-sizing: border-box; border: 1px solid #aaa; width: 150px; padding: 10px;">
+        Contoh box-sizing
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
